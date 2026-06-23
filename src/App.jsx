@@ -3,7 +3,7 @@ import "./App.css";
 const phoneDisplay = "+52 1 322 301 5630";
 const whatsappNumber = "5213223015630";
 const whatsapp = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-  "Hola, quiero hacer un pedido en PACTA Taquería."
+  "Hola, quiero hacer un pedido en Pacita Taqueria."
 )}`;
 const address = "Alhóndiga 2266, Jardines del Country, Guadalajara, Jalisco";
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
@@ -62,8 +62,8 @@ export default function App() {
     <div className="app">
       <nav className="navbar" aria-label="Navegación principal">
         <a className="brand" href="#inicio">
-          <img src="/logo.png" alt="Logo Pacita Taquería" />
-          <span>Pacita Taquería</span>
+          <img src="/logo.png" alt="Logo Pacita Taqueria" />
+          <span>Pacita Taqueria</span>
         </a>
         <div className="nav-links">
           <a href="#tacos">Tacos</a>
@@ -77,7 +77,7 @@ export default function App() {
         <div className="hero-burst" aria-hidden="true" />
         <div className="hero-content">
           <p className="eyebrow">Sábados y domingos · 8:00 AM - 3:00 PM</p>
-          <h1>PACTA Taquería</h1>
+          <h1>Pacita Taqueria</h1>
           <p className="hero-subtitle">Tacos, promociones y sabor de fin de semana</p>
           <div className="hero-buttons">
             <a className="btn btn-primary" href={whatsapp} target="_blank" rel="noreferrer">Pedir por WhatsApp</a>
@@ -141,7 +141,7 @@ export default function App() {
             <a className="btn btn-primary" href={mapsUrl} target="_blank" rel="noreferrer">Abrir en Google Maps</a>
           </div>
           <iframe
-            title="Mapa de Pacita Taquería en Guadalajara"
+            title="Mapa de Pacita Taqueria en Guadalajara"
             src={`https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -150,7 +150,7 @@ export default function App() {
       </main>
 
       <footer>
-        <h3>Pacita Taquería</h3>
+        <h3>Pacita Taqueria</h3>
         <p><strong>Pedidos:</strong> {phoneDisplay}</p>
         <p><strong>Dirección:</strong> {address}</p>
         <p><strong>Horario:</strong> Sábado y domingo, 8:00 AM - 3:00 PM</p>
