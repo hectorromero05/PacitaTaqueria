@@ -61,6 +61,11 @@ a {
   color: var(--white);
   font-size: 1.25rem;
   letter-spacing: .5px;
+  min-width: 0;
+}
+
+.brand span {
+  overflow-wrap: anywhere;
 }
 
 .brand img {
@@ -430,33 +435,72 @@ footer p {
 
 @media (max-width: 640px) {
   .navbar {
-    position: relative;
-    align-items: flex-start;
+    position: sticky;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 5%;
+    gap: 12px;
+  }
+
+  .brand {
+    justify-content: center;
+    font-size: 1.05rem;
   }
 
   .nav-links {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
 
   .nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 10px;
     border-radius: 999px;
     background: rgba(255,255,255,.12);
     font-size: .76rem;
+    text-align: center;
   }
 
   .hero {
     min-height: auto;
-    padding-top: 54px;
+    gap: 24px;
+    padding-top: 42px;
+    padding-bottom: 44px;
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 19vw, 5rem);
+    font-size: clamp(3rem, 16vw, 4.65rem);
+    line-height: .9;
+    overflow-wrap: anywhere;
+    text-shadow: 3px 3px 0 var(--white), 6px 6px 0 rgba(0,0,0,.14);
+  }
+
+  .eyebrow,
+  .section-label {
+    font-size: .82rem;
+  }
+
+  .hero-buttons,
+  .social-buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 18px;
+    box-shadow: 4px 4px 0 var(--dark);
   }
 
   .hero-card {
     max-width: 100%;
+    justify-self: stretch;
     transform: none;
   }
 
@@ -467,11 +511,36 @@ footer p {
 
   .section,
   .location {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 54px 5%;
+  }
+
+  .section h2,
+  .location h2 {
+    margin-bottom: 24px;
+  }
+
+  .image-wrap {
+    width: min(210px, 68vw);
+    height: min(210px, 68vw);
   }
 
   .price-badge {
     left: -10px;
+    min-width: 72px;
+    min-height: 72px;
+    font-size: 1.05rem;
+  }
+
+  .location iframe {
+    min-height: 300px;
+    border-radius: 20px;
+  }
+
+  .whatsapp {
+    right: 14px;
+    bottom: 14px;
+    width: 58px;
+    height: 58px;
+    font-size: 1.7rem;
   }
 }
